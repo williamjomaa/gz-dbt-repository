@@ -8,6 +8,7 @@ source as (
 
 renamed as (
 
+
     select
         orders_id,
         shipping_fee,
