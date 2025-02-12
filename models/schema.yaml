@@ -1,52 +1,13 @@
 # schema.yml
-
 version: 2
 
-sources: dbt_wjomaa
-  - name: evocative-volt-448409-d2.dbt_wjomaa
-
+sources:
+  - name: raw
+    schema: gz_raw_data
     tables:
+      - name: sales
+        identifier: raw_gz_sales
       - name: product
-         identifier: evocative-volt-448409-d2.dbt_wjomaa.stg_gz_raw_data__raw_gz_product
-         description: products of Greenweez
-
-         columns:
-           - name: product_id 
-             description: product
-           - name: purchse_price 
-             description: price of purchase
-
-
-    tables:
-        - name: sales
-         identifier: evocative-volt-448409-d2.dbt_wjomaa.stg_gz_raw_data__raw_gz_sales
-         description: sales of Greenweez
-
-         columns:
-           - name: date_date 
-             description: product
-           - name: orders_id 
-             description: price of purchase
-           - name: products_id 
-             description: product
-           - name: revenue 
-             description: price of purchase 
-           - name: quantity 
-             description: price of purchase
-             
-    tables:
-        - name: ship
-         identifier: evocative-volt-448409-d2.dbt_wjomaa.stg_gz_raw_data__raw_gz_ship
-         description: ship of Greenweez
-
-         columns:
-           - name: orders_id 
-             description: price of purchase
-           - name: shipping_fee 
-             description: shipping of purchase
-           - name: logcost 
-             description: logcost of purchase 
-           - name: ship_cost_clean 
-             description: ship cost of purchase
- 
-      
+        identifier: raw_gz_product
+      - name: ship
+        identifier: raw_gz_ship
