@@ -192,8 +192,8 @@ models:
      columns:
        - name: ads_margin
          description: operational_margin - ads_cost
-        #  tests:
-          #  - not_null
+         tests:
+           - not_null
        - name: average_basket
          description: average basket cost for each day
          tests:
@@ -203,8 +203,8 @@ models:
      columns:
        - name: ads_margin
          description: operational_margin - ads_cost
-        #  tests:
-          #  - not_null
+         tests:
+          - not_null
        - name: average_basket
          description: average basket cost for each day
          tests:
